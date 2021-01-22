@@ -21,6 +21,6 @@ public class ManterPacientesController {
 		List<Paciente> pacientes = pacienteRepository.findAll();			
 		model.addAttribute("pacientes", pacientes);
 		
-		return "manterPacientes";
+		return "/paciente/manterPacientes";
 	}
 }

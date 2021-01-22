@@ -36,6 +36,6 @@ public class PacienteController {
 	public String novoPaciente(RequisicaoNovoPaciente requisicao) {
 		Paciente paciente = requisicao.toPaciente();
 		pacienteRepository.save(paciente);
-		return "/paciente/manterPacientes";
+		return "redirect:/paciente/manterPacientes";
 	}
 }
