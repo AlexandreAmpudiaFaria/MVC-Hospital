@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head th:replace="~{base2 :: head}"></head>
+
+<body class="fundo">
+   <div>
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary teste">
+         <a class="navbar-brand testee" href="home.php">Home <i class="fas fa-home"></i></a>
+
+      </nav>
+
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="manterPacientes.php">Manter Pacientes <i class="fas fa-procedures"></i></a>
+      </nav>
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="gerarAtendimento.php">Gerar Atendimento <i class="fas fa-clipboard-list"></i></a>
+      </nav>
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="areadoMedico.php">Area do Médico <i class="fas fa-user-md"></i></a>
+      </nav>
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="manterMedicos.php">Manter Medicos <i class="fas fa-user-md"></i></a>
+      </nav>
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="manterProcedimentos.php">Procedimentos <i
+               class="fas fa-hand-holding-heart"></i></a>
+      </nav>
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="relatorioMedico.php">Relatorio <i class="fas fa-user-tie"></i></a>
+      </nav>
+
+      <!-- As a link -->
+      <nav class="navbar navbar-light bg-primary">
+         <a class="navbar-brand" href="formularioCadastrarUsuario.php">Usuarios <i class="fas fa-user-tie"></i></a>
+      </nav>
+   </div>
+   <div class="corpoCadastrarPaciente">
+      <br>
+      <h1 class="text-black container col-md-12 ">Cadastrar Novo Paciente</h1>
+      <form name="" method="POST" action="/paciente/novoPaciente">
+         <br>
+         <div class="form-group col-md-5">
+            <label for="txtNomePaciente">Nome do paciente :</label>
+            <input type="text" class="form-control" id="txtNome" name="txtNomePaciente"
+               placeholder="Digite o nome do paciente" required="">
+         </div>
+
+         <div class="form-group col-md-5">
+            <label for="txtCpf">CPF :</label>
+            <input type="text" class="form-control" name="txtCpf" placeholder="Digite o CPF do paciente" required="">
+         </div>
+
+         <div class="form-group col-md-5">
+            <label for="txtSus">Número SUS :</label>
+            <input type="text" class="form-control" name="txtSus" placeholder="Digite o número do SUS" required="">
+         </div>
+
+         <div class="form-group col-md-5">
+            <label for="txtTelefone">Telefone :</label>
+            <input type="text" class="form-control" name="txtTelefone" placeholder="Digite o telefone" required="">
+         </div>
+
+         <div class="form-group col-md-5">
+            <label for="txtEndereco">Endereço :</label>
+            <input type="text" class="form-control" name="txtEndereco" placeholder="Digite o endereco" required="">
+         </div>
+
+
+         <div class="form-group col-md-5">
+            <label for="txtObservacao">Observação :</label>
+            <input type="text" class="form-control" name="txtObservacao"
+               placeholder="Digite uma observação sobre o paciente">
+         </div>
+
+         <div class="form-group col-md-5">
+            <input type="submit" id="botaoEnviar" name="botaoEnviar" class="btn btn-success" value="Gravar">
+
+            <script src="jquery-3.4.1.min.js"></script>
+            <script src="jquery-3.4.1.min.js"></script>
+            <script src="toastr.min.js"></script>
+
+            <input type="reset" id="botaoLimpar" name="botaoLimpar" class=" btn btn-primary" value="Limpar">
+            <a href="/paciente/manterPacientes"><button class="btn btn-danger">Cancelar</button></a>
+         </div>
+
+
+      </form>
+   </div>
+
+</body>
+
+</html>
