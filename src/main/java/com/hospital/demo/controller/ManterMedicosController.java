@@ -1,6 +1,4 @@
 package com.hospital.demo.controller;
-
-
 import org.springframework.stereotype.Controller;
 
 @Controller

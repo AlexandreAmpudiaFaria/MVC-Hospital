@@ -26,7 +26,7 @@ public class ProcedimentoController {
 	public String manterProcedimento(Model model) {
 		List<Procedimento> procedimentos = procedimentoRepository.findAll();			
 		model.addAttribute("procedimentos", procedimentos);
-		return "procedimento/manterProcedimentos";
+		return "/procedimento/manterProcedimentos";
 	}
 
 }

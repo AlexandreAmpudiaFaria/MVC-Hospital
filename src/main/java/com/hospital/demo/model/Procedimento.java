@@ -9,25 +9,28 @@ import javax.persistence.Id;
 public class Procedimento {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long idProcedimento;
 	
-	private String descricao;
-	
-	
-	
-	
-	public Long getId() {
-		return id;
+	private String descricaoProcedimento;
+
+	public Long getIdProcedimento() {
+		return idProcedimento;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setIdProcedimento(Long idProcedimento) {
+		this.idProcedimento = idProcedimento;
 	}
-	public String getDescricao() {
-		return descricao;
+
+	public String getDescricaoProcedimento() {
+		return descricaoProcedimento;
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+
+	public void setDescricaoProcedimento(String descricaoProcedimento) {
+		this.descricaoProcedimento = descricaoProcedimento;
 	}
+	
+	
+	
 	
 	
 	

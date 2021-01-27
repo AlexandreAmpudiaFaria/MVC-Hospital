@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
-    <head th:replace="~{base2 :: head}"></head>
+<head th:replace="~{base2 :: head}"></head>
 
 <body class="corpo">
     <div>
@@ -51,7 +50,7 @@
         <br>
 
         <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary btnAddPaciente"
-            value="Adicionar Procedimento" onclick="javascript:location.href='formularioCadastrarProcedimento.php'">
+            value="Adicionar Procedimento">
         <br><br><br><br>
         <div class="container col-md-6 ListarPacientes">
             <table class="table table-striped">
@@ -59,12 +58,18 @@
                     <th class=" text-center col-md-1 id">ID</th>
                     <th class=" text-center col-md-10">Descrição</th>
                 </tr>
-                <div th:each="procedimento : ${procedimentos}"></div>
-                <tr>
-                    <td class="text-center"><div th:text="${procedimento.id}">ID</div></td>
-                    <td class="text-center"><div th:text="${procedimento.descricao}">Descricao</div></td>
-                </tr>
+                <div th:each="procedimento : ${procedimentos}">
+                    <tr>
+                        <td class="text-center">
+                            <div th:text="${procedimento.idProcedimento}">ID</div>
+                        </td>
+                        <td class="text-center">
+                            <div th:text="${procedimento.descricaoProcedimento}">Descricao</div>
+                        </td>
+                    </tr>
+                </div>
             </table>
         </div>
 </body>
+
 </html>
