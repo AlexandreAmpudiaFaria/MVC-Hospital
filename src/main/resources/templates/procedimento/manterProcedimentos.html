@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head th:replace="~{base2 :: head}"></head>
+
+<body class="corpo">
+    <div>
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary teste">
+            <a class="navbar-brand testee" href="home.php">Home <i class="fas fa-home"></i></a>
+
+        </nav>
+
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="manterPacientes.php">Manter Pacientes <i class="fas fa-procedures"></i></a>
+        </nav>
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="gerarAtendimento.php">Gerar Atendimento <i
+                    class="fas fa-clipboard-list"></i></a>
+        </nav>
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="areadoMedico.php">Area do Médico <i class="fas fa-user-md"></i></a>
+        </nav>
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="manterMedicos.php">Manter Medicos <i class="fas fa-user-md"></i></a>
+        </nav>
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="manterProcedimentos.php">Procedimentos <i
+                    class="fas fa-hand-holding-heart"></i></a>
+        </nav>
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="relatorioMedico.php">Relatorio <i class="fas fa-user-tie"></i></a>
+        </nav>
+
+        <!-- As a link -->
+        <nav class="navbar navbar-light bg-primary">
+            <a class="navbar-brand" href="formularioCadastrarUsuario.php">Usuarios <i class="fas fa-user-tie"></i></a>
+        </nav>
+    </div>
+
+    <div class="table-responsive container table corpoManterPacientes">
+        <br>
+        <h1 class="text-black ">Lista de Procedimentos</h1>
+        <br>
+
+        <input type="button" id="botaoAdicionar" name="botaoAdicionar" class="btn btn-primary btnAddPaciente"
+            value="Adicionar Procedimento" onclick="javascript:location.href='formularioCadastrarProcedimento.php'">
+        <br><br><br><br>
+        <div class="container col-md-6 ListarPacientes">
+            <table class="table table-striped">
+                <tr>
+                    <th class=" text-center col-md-1 id">ID</th>
+                    <th class=" text-center col-md-10">Descrição</th>
+                </tr>
+                <div th:each="procedimento : ${procedimentos}"></div>
+                <tr>
+                    <td class="text-center"><div th:text="${procedimento.id}">ID</div></td>
+                    <td class="text-center"><div th:text="${procedimento.descricao}">Descricao</div></td>
+                </tr>
+            </table>
+        </div>
+</body>
+</html>

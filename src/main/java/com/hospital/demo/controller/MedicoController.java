@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hospital.demo.dto.RequesicaoNovoMedico;
 import com.hospital.demo.model.Medico;
 import com.hospital.demo.repository.MedicoRepository;
 
@@ -25,4 +27,15 @@ public class MedicoController {
 		return "/medico/manterMedicos";
 	}
 	
+	@GetMapping("/cadastrarMedico")
+	public String cadastrarMedico() {
+		return "medico/cadastrarMedico";
+	}
+	
+	@PostMapping("/novoMedico")
+	public String novoMedico(RequesicaoNovoMedico requisicao) {
+		Medico medico = requisicao.toMedico();
+		medicoRepository.save(medico);
+		return ("redirect:/medico/manterMedicos");
+	}
 }
