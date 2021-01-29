@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head th:replace="~{base2 :: head}"></head>
 
@@ -43,35 +43,29 @@
             <a class="navbar-brand" href="formularioCadastrarUsuario.php">Usuarios <i class="fas fa-user-tie"></i></a>
         </nav>
     </div>
+    <div class="corpoCadastrarPaciente">
+        <br><br>
+        <h1 class="text-black container col-md-12">Cadastrar Novo Procedimento</h1>
+        <form id="frmNovoPaciente" name="frmNovoPaciente" method="POST" action="/procedimento/novoProcedimento">
+            <br>
+            <div class="form-group col-md-5">
+                <label for="lblNome">Descrição :</label>
+                <input type="text" class="form-control" id="txtDescricao" name="txtDescricao"
+                    placeholder="Digite o nome do paciente" required="">
+            </div>
 
-    <div class="table-responsive container table corpoManterPacientes">
-        <br>
-        <h1 class="text-black ">Lista de Procedimentos</h1>
-        <br>
 
-        <a href="/procedimento/cadastrarProcedimento"><button class="btn btn-primary btnAddPaciente">Adicionar
-                Procedimento</button>
-        </a>
+            <div class="form-group col-md-5">
+                <input type="submit" id="botaoEnviar" name="botaoEnviar" class="btn btn-success" value="Gravar">
+                <input type="reset" id="botaoLimpar" name="botaoLimpar" class=" btn btn-primary" value="Limpar">
+                <input type="button" id="botaoCancelar" name="botaoCancelar" class="btn btn-danger" value="Cancelar"
+                    onclick="javascript:location.href='manterProcedimentos.php'">
+            </div>
 
-        <br><br><br><br>
-        <div class="container col-md-6 ListarPacientes">
-            <table class="table table-striped">
-                <tr>
-                    <th class=" text-center col-md-1 id">ID</th>
-                    <th class=" text-center col-md-10">Descrição</th>
-                </tr>
-                <div th:each="procedimento : ${procedimentos}">
-                    <tr>
-                        <td class="text-center">
-                            <div th:text="${procedimento.idProcedimento}">ID</div>
-                        </td>
-                        <td class="text-center">
-                            <div th:text="${procedimento.descricaoProcedimento}">Descricao</div>
-                        </td>
-                    </tr>
-                </div>
-            </table>
-        </div>
+
+        </form>
+    </div>
+
 </body>
 
 </html>
