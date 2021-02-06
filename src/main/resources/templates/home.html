@@ -4,45 +4,9 @@
 <head th:replace="~{base2 :: head}"></head>
 
 <body class="fundo">
-    <div>
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary teste">
-            <a class="navbar-brand testee" href="home.php">Home <i class="fas fa-home"></i></a>
 
-        </nav>
-
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="/paciente/manterPacientes">Manter Pacientes <i class="fas fa-procedures"></i></a>
-        </nav>
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="gerarAtendimento.php">Gerar Atendimento <i
-                    class="fas fa-clipboard-list"></i></a>
-        </nav>
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="">Area do Médico <i class="fas fa-user-md"></i></a>
-        </nav>
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="/medico/manterMedicos">Manter Medicos <i class="fas fa-user-md"></i></a>
-        </nav>
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="/procedimento/manterProcedimentos">Procedimentos <i
-                    class="fas fa-hand-holding-heart"></i></a>
-        </nav>
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="relatorioMedico.php">Relatorio <i class="fas fa-user-tie"></i></a>
-        </nav>
-
-        <!-- As a link -->
-        <nav class="navbar navbar-light bg-primary">
-            <a class="navbar-brand" href="formularioCadastrarUsuario.php">Usuarios <i class="fas fa-user-tie"></i></a>
-        </nav>
-    </div>
+    <!--importar o navbar do template-->
+    <nav th:replace="~{base2 :: nav}"></nav>
 
 
     <div class="logo">
