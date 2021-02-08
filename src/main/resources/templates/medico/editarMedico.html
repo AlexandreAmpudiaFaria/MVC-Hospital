@@ -8,12 +8,12 @@
    <!--importar o navbar do template-->
    <nav th:replace="~{base2 :: nav}"></nav>
 
-   <div class="mt-3 ml-3">
-      <h1 class="text-black mb-5">Cadastrar Novo Médico</h1>
+   <div class="mt-3 ml-3" th:each="medico : ${medicos}">
+      <h1 class="text-black mb-5">Editar Cadastro do Médico</h1>
       <form id="frmNovoMedico" name="frmNovoMedico" method="POST" action="/medico/novoMedico">
          <div class="row">
             <div class="form-group col-md-5">
-               <label for="txtNome">Nome do medico :</label>
+               <label for="txtNome"><div th:text="${medico.nomeMedico}">nomeMedico</div></label>
                <input type="text" class="form-control" name="txtNome" placeholder="Digite o nome do paciente"
                   required="">
             </div>

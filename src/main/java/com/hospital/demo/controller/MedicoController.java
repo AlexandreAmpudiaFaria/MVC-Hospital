@@ -1,6 +1,7 @@
 package com.hospital.demo.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,6 +31,13 @@ public class MedicoController {
 	@GetMapping("/cadastrarMedico")
 	public String cadastrarMedico() {
 		return "medico/cadastrarMedico";
+	}
+	
+	@GetMapping("/editarMedico")
+	public String editarMedico(Long id, Model model) {
+		Optional<Medico> medicos = medicoRepository.findById(id);
+		model.addAttribute("medicos", medicos);
+		return "medico/editarMedico";
 	}
 	
 	@PostMapping("/novoMedico")
